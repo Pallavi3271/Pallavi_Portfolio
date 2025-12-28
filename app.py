@@ -33,13 +33,13 @@ projects = [
         "name": "Portfolio Website",
         "technologies": "Flask, HTML, CSS",
         "description": "My personal portfolio website showcasing projects, skills, and achievements.",
-        "link": "https://pallavi-portfolio.onrender.com"  # Render live link
+        "link": "/portfolio_project"  # Internal Flask route
     },
     {
         "name": "Tourism Website",
         "technologies": "HTML, CSS, JavaScript",
         "description": "Developed a tourism website showcasing popular destinations with images and videos.",
-        "link": "https://pallavi3271.github.io/Tourism-Website/"
+        "link": "https://pallavi3271.github.io/Tourism-Website/"  # External link
     },
     {
         "name": "Suicidal Ideation Detection",
@@ -76,8 +76,6 @@ education = [
     }
 ]
 
-# ---------- INTERNSHIPS ----------
-
 internships = [
     {
         "title": "Process Mining Intern",
@@ -112,6 +110,12 @@ def index():
 def projects_page():
     return render_template("projects.html", personal_info=personal_info, projects=projects)
 
+# Internal page for Portfolio Website
+@app.route("/portfolio_project")
+def portfolio_project_page():
+    return render_template("portfolio_project.html", personal_info=personal_info)
+
+# Internal page for Suicidal Ideation Detection
 @app.route("/suicidal_project")
 def suicidal_project_page():
     return render_template("suicidal_project.html", personal_info=personal_info)

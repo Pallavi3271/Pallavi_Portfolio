@@ -8,13 +8,12 @@
         <h2>{{ project.name }}</h2>
         <p><strong>Technologies:</strong> {{ project.technologies }}</p>
         <p>{{ project.description }}</p>
-        {% if project.link != "#" %}
-        <a href="{{ project.link }}" class="btn" target="_blank">View Project</a>
+
+        {# Open internal route or external link properly #}
+        {% if project.link.startswith('http') %}
+            <a href="{{ project.link }}" class="btn" target="_blank">View Project</a>
         {% else %}
-        {# For projects with link "#" we open suicidal_project.html #}
-        {% if project.name == "Suicidal Ideation Detection" %}
-        <a href="{{ url_for('suicidal_project_page') }}" class="btn">View Project</a>
-        {% endif %}
+            <a href="{{ project.link }}" class="btn">View Project</a>
         {% endif %}
     </div>
     {% endfor %}
