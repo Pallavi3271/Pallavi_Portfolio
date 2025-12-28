@@ -1,0 +1,58 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container profile-container">
+
+    <!-- Profile Section -->
+    <div class="card profile-header-card">
+        <img src="{{ url_for('static', filename='images/profile.jpg') }}" 
+             alt="Profile Photo" 
+             class="profile-photo">
+        <h1 class="profile-name">Hi, I'm {{ personal_info.name }}</h1>
+        <h3 class="profile-title">{{ personal_info.title }}</h3>
+    </div>
+
+    <!-- Career Objective -->
+    <div class="card">
+        <h2>Career Objective</h2>
+        <p>{{ personal_info.objective }}</p>
+    </div>
+
+    <!-- About Section -->
+    <div class="card">
+        <h2>About Me</h2>
+        <p>{{ personal_info.about }}</p>
+    </div>
+
+    <!-- Technical Skills -->
+    <div class="card">
+        <h2>Technical Skills</h2>
+        <ul>
+            {% for skill in personal_info.technical_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Soft Skills -->
+    <div class="card">
+        <h2>Soft Skills</h2>
+        <ul>
+            {% for skill in personal_info.soft_skills %}
+            <li>{{ skill }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <!-- Hobbies -->
+    <div class="card">
+        <h2>Hobbies</h2>
+        <ul>
+            {% for hobby in personal_info.hobbies %}
+            <li>{{ hobby }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+</div>
+{% endblock %}

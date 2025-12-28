@@ -1,0 +1,61 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <h1 class="page-title">Suicidal Ideation Detection Project</h1>
+    <p class="page-subtitle">
+        Machine Learning based system to predict suicidal ideation using survey and clinical data.
+    </p>
+
+    <!-- Step 1 -->
+    <div class="card">
+        <h2>Home Page</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/home.png') }}"
+             alt="Home Page" class="project-image">
+    </div>
+
+    <!-- Step 2 -->
+    <div class="card">
+        <h2>Admin Login Page</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/admin_login.png') }}"
+             alt="Admin Login" class="project-image">
+    </div>
+
+    <!-- Step 3 -->
+    <div class="card">
+        <h2>Data Upload Page</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/upload.png') }}"
+             alt="Data Upload" class="project-image">
+    </div>
+
+    <!-- Step 4 -->
+    <div class="card">
+        <h2>Data Uploaded Successfully</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/uploaded_data.png') }}"
+             alt="Uploaded Data" class="project-image">
+    </div>
+
+    <!-- Step 5 -->
+    <div class="card">
+        <h2>Preprocessed Data</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/preprocessed.png') }}"
+             alt="Preprocessed Data" class="project-image">
+    </div>
+
+    <!-- Step 6 -->
+    <div class="card">
+        <h2>Prediction Form</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/prediction_form.png') }}"
+             alt="Prediction Form" class="project-image">
+    </div>
+
+    <!-- Step 7 -->
+    <div class="card">
+        <h2>Final Output</h2>
+        <img src="{{ url_for('static', filename='images/suicidal_project/final_output.png') }}"
+             alt="Final Output" class="project-image">
+    </div>
+
+</div>
+{% endblock %}

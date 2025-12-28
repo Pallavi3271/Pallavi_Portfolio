@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Education</h1>
+    {% for edu in education %}
+    <div class="card">
+        <h2>{{ edu.degree }}</h2>
+        <p>{{ edu.institute }}</p>
+        <p><strong>Year:</strong> {{ edu.year }} | <strong>CGPA:</strong> {{ edu.cgpa }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

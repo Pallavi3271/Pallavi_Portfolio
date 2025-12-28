@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+
+    <div class="card" style="text-align:center;">
+        <h2>Contact Me</h2>
+        <p>You can reach out or follow me through these links:</p>
+        <div style="margin-top: 15px;">
+            <a href="{{ personal_info.github }}" target="_blank" class="btn">GitHub</a>
+            <a href="{{ personal_info.linkedin }}" target="_blank" class="btn">LinkedIn</a>
+            <a href="mailto:pallavi23210@gmail.com" class="btn">Email Me</a>
+        </div>
+    </div>
+
+</div>
+{% endblock %}

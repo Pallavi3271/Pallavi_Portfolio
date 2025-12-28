@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Certifications</h1>
+    {% for cert in certifications %}
+    <div class="card">
+        <p>{{ cert }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

@@ -1,0 +1,12 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Achievements</h1>
+    {% for achievement in achievements %}
+    <div class="card">
+        <p>{{ achievement }}</p>
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}

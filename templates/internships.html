@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<div class="container">
+    <h1>Internships</h1>
+    {% for internship in internships %}
+    <div class="card">
+        <h2>{{ internship.title }} - {{ internship.organization }}</h2>
+        <p><strong>Duration:</strong> {{ internship.duration }}</p>
+        <p>{{ internship.description }}</p>
+        {% if internship.certificate %}
+        <p><a href="{{ url_for('static', filename='images/internships/' ~ internship.certificate) }}" target="_blank" class="btn">View Certificate</a></p>
+        {% endif %}
+    </div>
+    {% endfor %}
+</div>
+{% endblock %}
