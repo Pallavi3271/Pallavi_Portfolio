@@ -6,7 +6,7 @@ app = Flask(__name__)
 
 personal_info = {
     "name": "Uppara Pallavi",
-    "title": "B.Tech Graduate – Seeking Opportunities",  # Updated title
+    "title": "B.Tech Graduate – Seeking Opportunities",
     "objective": "To work in challenging environmental set up where I can get an opportunity to learn, improve skills for my personal growth as well as to contribute positively for the growth of organization.",
     "about": """I am a B.Tech CSE graduate with good skills in Python, SQL, and basic front-end development (HTML & CSS),
     along with a basic understanding of Java. I enjoy learning new technologies, practicing coding, and building small projects.""",
@@ -30,6 +30,12 @@ personal_info = {
 
 projects = [
     {
+        "name": "Portfolio Website",
+        "technologies": "Flask, HTML, CSS",
+        "description": "My personal portfolio website showcasing projects, skills, and achievements.",
+        "link": "https://pallavi-portfolio.onrender.com"  # Render live link
+    },
+    {
         "name": "Tourism Website",
         "technologies": "HTML, CSS, JavaScript",
         "description": "Developed a tourism website showcasing popular destinations with images and videos.",
@@ -39,7 +45,7 @@ projects = [
         "name": "Suicidal Ideation Detection",
         "technologies": "Python, Machine Learning",
         "description": "Machine learning system to detect suicidal ideation using surveys, social media, and clinical records.",
-        "link": "/suicidal_project"  # Updated link to route
+        "link": "/suicidal_project"  # Internal Flask route
     }
 ]
 
@@ -70,7 +76,7 @@ education = [
     }
 ]
 
-# ---------- INTERNSHIPS (UPDATED WITH CERTIFICATES) ----------
+# ---------- INTERNSHIPS ----------
 
 internships = [
     {
@@ -78,7 +84,7 @@ internships = [
         "organization": "AICTE",
         "duration": "May 2023 – July 2023",
         "description": "Completed virtual internship on Process Mining.",
-        "certificate": "process_mining_cert.png"  # Add certificate image filename
+        "certificate": "process_mining_cert.png"
     },
     {
         "title": "Salesforce Developer Intern",
